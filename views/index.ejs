@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Visualization description</title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+    <!-- JavaScript libs -->
+    <script src="/lib/jquery-3.3.1.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="/lib/echarts.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <!-- program core function -->
+    <script src="/javascripts/global.js"></script>
+    <script src="/javascripts/comm.js"></script>
+    <script src="/javascripts/imageDB.js"></script>
+    <script src="/javascripts/imageEvaluate.js"></script>
+    <script type="text/javascript" src="/javascripts/userDB.js"></script>
+
+
+    <div class="content-box">
+        <!-- entry page -->
+        <div id="entry-box">
+
+            <p id="entry-box-title">
+                Describe A Scientific Visualization
+            </p>
+            <br>
+
+            <span>Welcome to our experiment! Please enter your userID below.</span>
+            <br><br>
+            User ID: <input type="text" name="userIDText" class="workID-input">
+            <br><br><br>
+            <button class="but_cus" id="but_entry">Begin experiment</button>
+        </div>
+
+        <div class="container" id="loading-box">
+            <span id="loading-text">Loading...</span>
+            <br><br><br>
+            <div class="progress" id="progress-bar">
+                <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+        <div class="container" id="instruction-box">
+            <p id="instruction-title">Training Instruction</p><br><br><br>
+            <!-- <p id="instruction-text">Each image will be shown on the screen for 1 seconds.</p>
+            After obeserving each image, please describe the information you obtained from this image as much detail as you can. -->
+            <p id="instruction-text">A stream of 15 images will be shown on the screen for 1 seconds each. After obeserving each image, You will have two tasks: <br> 1. describe the information you obtained from this image. <br> 2. try to draw the image as much detail as you can.</p>
+            <br><br><br>
+            <p style="text-align:center"><button class="but_cus" id="but_training">Start Training</button></p>
+
+        </div>
+
+        <div class="container" id="lab-box">
+            <div id="descript-box">
+                <p id="lab-text">Please describe and draw the image you just saw as thorough and accurate as possible.</p>
+                <!-- <textarea class="form-control" rows="5" id="comment"></textarea> -->
+                <br><br>
+                <button class="but_cus" id="but_submit">Next</button>
+            </div>
+
+
+
+            <div class="imageContainer">
+                <img src="http://web.cse.ohio-state.edu/~li.8950/data/image/sscivis1K/sci1054.png" class="visImage">
+                <img src="/images/cross.png" class="fixImage">
+                <img src="http://web.cse.ohio-state.edu/~li.8950/data/image/sscivis1K/sci1054.png" class="maskImage">
+            </div>
+
+        <div id="finish-box">
+
+            <p id="finish-text">Thanks for participating our experiment!</p>
+
+        </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
